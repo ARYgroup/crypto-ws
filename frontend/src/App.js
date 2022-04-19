@@ -8,7 +8,7 @@ function App() {
     <Box>
       <Image className={styles.logo} src={logo} alt="logo" />
       <Center color="gray.500" pb="4px">
-       <Heading>Kraken API</Heading> 
+       <Heading>Crypto Playground</Heading> 
       </Center>
       <Box className={styles.view}>
         <Dashboard />

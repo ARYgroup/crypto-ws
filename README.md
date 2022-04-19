@@ -1,4 +1,4 @@
-# Crypto-WS 
+# Crypto Playground
 The building blocks of a cryptocurrency tool for managing real-time crypto exchange data. Engineered in a microservices architecture by incorporating a seperate client side, backend layer and script dependencies. 
 
 ## Development and Testing Environment
