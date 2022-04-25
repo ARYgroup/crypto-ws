@@ -25,14 +25,26 @@ app.get("/server", (req, res) => {
   )
 })
 
-// change api endpoint below to orderbook
+// api endpoint: tickerInfo
+app.get("/tickerInfo", (req, res) => {
+  axios
+    .get("https://api.kraken.com/0/public/Ticker?pair=XBTUSD")
+    .then((result) => res.send(result.data))
+})
+
+// api endpoint: orderbook
 app.get("/orderbook", (req, res) => {
   axios
     .get("https://api.kraken.com/0/public/Depth?pair=XBTUSD")
     .then((result) => res.send(result.data))
 })
 
-// add api endpoints for ohlc below
+// api endpoints: ohlc
+app.get("/ohlc", (req, res) => {
+  axios
+    .get("https://api.kraken.com/0/public/OHLC?pair=XBTUSD")
+    .then((result) => res.send(result.data))
+})
 
 // add api endpoint for handling websocket data below
 app.get("/api", (req, res) => {

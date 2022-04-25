@@ -5,9 +5,9 @@ import Dashboard from "./components/dashboard"
 
 function App() {
   return (
-    <Box>
+    <Box className={styles.container}>
       <Image className={styles.logo} src={logo} alt="logo" />
-      <Center color="gray.500" pb="4px">
+      <Center color="whiteAlpha.800" pb="4px">
        <Heading>Crypto Playground</Heading> 
       </Center>
       <Box className={styles.view}>

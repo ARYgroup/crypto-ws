@@ -1,12 +1,20 @@
 .logo {
-  height: 7rem; 
-  margin: 0 auto; 
+  height: 7rem;
+  margin: 0 auto;
   padding: 1rem;
   pointer-events: none;
 }
 
+.container {
+  background: rgba(161,153,151, 0.8);
+}
+
+.overlay {
+  background: rgba(230, 219, 217, 0.8);
+}
+
 .view {
-  margin: 0 auto; 
+  margin: 0 auto;
   padding: 1rem;
 }
 

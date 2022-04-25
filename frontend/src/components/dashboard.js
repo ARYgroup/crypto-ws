@@ -1,8 +1,10 @@
 // TODO: separate the sections of the dashboard into separate components and pull them in here
 import React from "react"
-import { Container, SimpleGrid, Badge, Text } from "@chakra-ui/react"
+import { Container, SimpleGrid, Text } from "@chakra-ui/react"
 import ExchangeInfo from "./exchangeInfo"
 import OrderBook from "./orderbookInfo"
+import TickerInfo from "./tickerInfo"
+import OHLC from "./ohlcInfo"
 
 function Dashboard() {
   const [wsData, setWsData] = React.useState(null)
@@ -16,7 +18,10 @@ function Dashboard() {
   return (
     <Container maxW="80vw" p={2}>
       <ExchangeInfo />
+      <TickerInfo />
       <OrderBook />
+      <OHLC />
+
       <SimpleGrid columns={{ sm: 1, md: 2 }} align="center" p={2} mb={4}>
         <Text fontSize="xl">WebSocket</Text>
         <Container
