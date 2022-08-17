@@ -8,7 +8,7 @@ import OHLC from "./ohlcInfo"
 
 function Dashboard() {
   const [wsData, setWsData] = React.useState(null)
-  
+
   React.useEffect(() => {
     fetch("/api")
       .then((res) => res.json())
@@ -16,7 +16,7 @@ function Dashboard() {
   }, [])
 
   return (
-    <Container maxW="80vw" p={2}>
+    <Container maxW="80vw" p={2} mt={20}>
       <ExchangeInfo />
       <TickerInfo />
       <OrderBook />

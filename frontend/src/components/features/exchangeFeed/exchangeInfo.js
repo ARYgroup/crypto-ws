@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import {
   Container,
   SimpleGrid,
@@ -15,10 +15,10 @@ import { SunIcon, CalendarIcon } from "@chakra-ui/icons"
 import moment from "moment-timezone"
 
 function ExchangeInfo() {
-  const [serverTime, setServerTime] = React.useState(null)
-  const [systemStatus, setSystemStatus] = React.useState(null)
+  const [serverTime, setServerTime] = useState(null)
+  const [systemStatus, setSystemStatus] = useState(null)
 
-  React.useEffect(() => {
+  useEffect(() => {
     const fetchData = async () => {
       let rfcTime,
         estTime,
@@ -35,7 +35,15 @@ function ExchangeInfo() {
   }, [])
 
   return (
-    <SimpleGrid align="center" columns={{ sm: 1, md: 2 }} p={2} mb={4}>
+    <SimpleGrid
+      border="1px"
+      borderColor="green"
+      borderRadius="lg"
+      align="center"
+      columns={{ sm: 1, md: 2 }}
+      p={2}
+      mb={4}
+    >
       <Stat
         align="center"
         borderRadius="lg"
@@ -56,7 +64,12 @@ function ExchangeInfo() {
           <StatArrow type="increase" />3 stablecoins available
         </StatHelpText>
       </Stat>
-      <Container w="80%" h={{ sm: "10vh", md: "10vh" }} p={2} borderColor="grey">
+      <Container
+        w="80%"
+        h={{ sm: "10vh", md: "10vh" }}
+        p={2}
+        borderColor="grey"
+      >
         <Badge borderRadius="lg" p={1} mt={-4}>
           Kraken
         </Badge>

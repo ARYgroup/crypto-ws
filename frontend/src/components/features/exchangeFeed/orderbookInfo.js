@@ -99,7 +99,12 @@ function OrderBook() {
             borderColor="grey"
             borderRadius="lg"
           >
-            <Table variant="unstyled" size="xs" fontSize="xs" justifyContent="center">
+            <Table
+              variant="unstyled"
+              size="xs"
+              fontSize="xs"
+              justifyContent="center"
+            >
               <Thead>
                 <Tr>
                   {askData &&
